@@ -16,6 +16,10 @@ namespace Task_Day_2
         [SerializeField] private GameObject mapMarker;
 
         [SerializeField] private float selectedPointScale = 1.5f;
+
+        // [SerializeField] private int maxStars;
+        // [SerializeField] private int maxKnowledge;
+        // [SerializeField] private int maxPots;
         
         private void Awake()
         {
@@ -35,7 +39,7 @@ namespace Task_Day_2
 
         private void Update()
         {
-            if (SelectedPoint == null) { Debug.Log("No point selected"); return; }
+            if (SelectedPoint == null) { return; }
             
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {

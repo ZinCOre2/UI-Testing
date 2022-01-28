@@ -45,13 +45,18 @@ public class ResourceWindow : MonoBehaviour
         knowledgeSlider.value = point.Knowledge;
         potSlider.value = point.Pots;
     }
-    
+
     private void ChangeTPointName(string newName)
     {
         OnNameConfirmed?.Invoke(newName);
     }
     private void ChangeTPointStars(float amount)
     {
+        // if ((int)amount > 50)
+        // {
+        //     amount = 50;
+        //     starSlider.value = 50;
+        // }
         OnResourcesChanged?.Invoke(ResourceType.Stars, (int)amount);
     }
     private void ChangeTPointKnowledge(float amount)

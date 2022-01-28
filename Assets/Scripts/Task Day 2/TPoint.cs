@@ -28,6 +28,7 @@ public class TPoint : MonoBehaviour
         for (int i = Coins; i < 3; i++)
         {
             coinImages[i].SetActive(false);
+            Debug.Log($"Disabled {coinImages[i].name}");
         }
     }
 
